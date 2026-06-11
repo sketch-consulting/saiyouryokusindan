@@ -238,7 +238,7 @@
     min-width: 80px;
   }
   .step-label {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.15em;
     color: var(--gray-400);
@@ -302,7 +302,7 @@
     letter-spacing: 0.02em;
   }
   .section-heading p {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--gray-600);
     margin-top: 8px;
   }
@@ -344,7 +344,7 @@
     border-radius: 999px;
   }
   .q-text {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 1.75;
     color: var(--ink);
@@ -538,17 +538,17 @@
   /* ========== Result ========== */
   .result-wrap { padding: 0 0 60px; }
   .result-hero {
-    padding: 60px 24px 80px;
+    padding: 40px 24px 60px;
     text-align: center;
-    color: #fff;
+    color: var(--ink);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(160deg, #1a4a3a 0%, #2d6e5a 100%); /* fallback */
+    background: #f5f7fa; /* fallback - light bg */
   }
-  .result-hero.rank-S { background: linear-gradient(160deg, #1a4a3a 0%, #2d6e5a 100%); }
-  .result-hero.rank-A { background: linear-gradient(160deg, #2d6e5a 0%, #4ea88a 100%); }
-  .result-hero.rank-B { background: linear-gradient(160deg, #c46d2d 0%, #e88450 100%); }
-  .result-hero.rank-C { background: linear-gradient(160deg, #a01d2c 0%, #d92e3f 100%); }
+  .result-hero.rank-S,
+  .result-hero.rank-A,
+  .result-hero.rank-B,
+  .result-hero.rank-C { background: #f5f7fa; }
   .result-hero::before {
     content: "";
     position: absolute; inset: 0;
@@ -558,10 +558,11 @@
     pointer-events: none;
   }
   .result-eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.3em;
     font-weight: 700;
-    opacity: 0.85;
+    color: var(--green-700);
+    opacity: 0.9;
     margin-bottom: 18px;
     position: relative;
   }
@@ -586,21 +587,22 @@
     display: inline-flex;
     align-items: baseline;
     gap: 4px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 14px 28px;
+    background: var(--green-900);
+    border: none;
+    padding: 16px 36px;
     border-radius: 999px;
     position: relative;
+    color: #fff;
   }
   .result-score-num {
     font-family: 'Noto Serif JP', serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 900;
     line-height: 1;
+    color: #fff;
   }
-  .result-score-max { font-size: 14px; opacity: 0.7; }
-  .result-score-label { font-size: 11px; letter-spacing: 0.15em; margin-left: 8px; opacity: 0.8; }
+  .result-score-max { font-size: 16px; opacity: 0.8; color: #fff; }
+  .result-score-label { font-size: 12px; letter-spacing: 0.15em; margin-left: 8px; opacity: 0.8; color: #fff; }
 
   .result-body {
     padding: 32px 24px;
@@ -612,7 +614,7 @@
   }
 
   .result-comment {
-    font-size: 14.5px;
+    font-size: 16px;
     line-height: 2;
     color: var(--ink);
     background: var(--green-50);
@@ -678,14 +680,14 @@
 
   /* ========== Character display ========== */
   .char-svg-wrap {
-    width: 220px; height: 276px;
-    margin: 4px auto 10px;
+    width: 286px; height: 358px;
+    margin: 4px auto 20px;
     position: relative; z-index: 1;
-    filter: drop-shadow(0 12px 28px rgba(0,0,0,0.32));
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45), 0 0 0 3px rgba(255,255,255,0.25);
   }
-  .char-svg-wrap img, .char-svg-wrap svg { width: 100%; height: 100%; object-fit: contain; }
+  .char-svg-wrap img, .char-svg-wrap svg { width: 100%; height: 100%; object-fit: cover; display: block; }
   .rank-pill {
     display: none; /* hidden: already shown in card image */
   }
@@ -697,7 +699,7 @@
     display: flex; align-items: center; gap: 8px;
     padding: 26px 24px 14px;
     font-family: 'Noto Serif JP', serif;
-    font-size: 14px; font-weight: 700; color: var(--ink);
+    font-size: 16px; font-weight: 700; color: var(--ink);
     background: #fff;
   }
   .detail-preview {
@@ -714,24 +716,24 @@
   }
   .gate-title {
     font-family: 'Noto Serif JP', serif;
-    font-size: 16px; font-weight: 700;
-    text-align: center; color: var(--ink); margin-bottom: 8px;
+    font-size: 18px; font-weight: 700;
+    text-align: center; color: var(--ink); margin-bottom: 10px;
   }
-  .gate-desc { font-size: 12px; color: #777; text-align: center; margin-bottom: 24px; line-height: 1.8; }
+  .gate-desc { font-size: 14px; color: #666; text-align: center; margin-bottom: 24px; line-height: 1.9; }
   .cat-bar-row { margin-bottom: 14px; }
   .cat-bar-row.weak .cat-label-text { color: #d92e3f; }
   .cat-bar-label {
     display: flex; align-items: center; gap: 6px;
-    font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 5px;
+    font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 6px;
   }
   .cat-bar-track { background: var(--gray-200); border-radius: 999px; height: 8px; overflow: hidden; }
   .cat-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green-900), var(--green-700)); }
   .cat-bar-row.weak .cat-bar-fill { background: linear-gradient(90deg, #a01d2c, #d92e3f); }
-  .cat-bar-meta { display: flex; justify-content: flex-end; font-size: 11px; color: #aaa; margin-top: 2px; }
+  .cat-bar-meta { display: flex; justify-content: flex-end; font-size: 13px; color: #888; margin-top: 3px; }
   .detail-subtitle {
     font-family: 'Noto Serif JP', serif;
-    font-size: 13px; font-weight: 700; color: var(--ink);
-    margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-200);
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    margin: 24px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-200);
   }
   .weak-tag {
     display: inline-block; background: #fef2f2; color: #d92e3f;
@@ -739,7 +741,7 @@
     font-family: 'Noto Sans JP', sans-serif; font-weight: 700; letter-spacing: 0;
   }
   .improvement-list { padding-left: 20px; margin: 0; }
-  .improvement-list li { font-size: 13px; line-height: 1.9; color: var(--ink); margin-bottom: 6px; }
+  .improvement-list li { font-size: 15px; line-height: 2; color: var(--ink); margin-bottom: 8px; }
   .consult-cta-box {
     background: linear-gradient(135deg, var(--green-900), var(--green-700));
     color: #fff; padding: 32px 24px; text-align: center;
@@ -760,7 +762,7 @@
     font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700;
     line-height: 1.7; margin-bottom: 10px; position: relative;
   }
-  .consult-cta-desc { font-size: 13px; opacity: 0.9; line-height: 1.9; position: relative; }
+  .consult-cta-desc { font-size: 15px; opacity: 0.9; line-height: 1.9; position: relative; }
 
   /* ========== Loading overlay ========== */
   .loading-overlay {
@@ -824,7 +826,7 @@
 
     /* ---- Result hero ---- */
     .result-hero { padding: 72px 48px 96px; }
-    .char-svg-wrap { width: 260px; height: 326px; }
+    .char-svg-wrap { width: 320px; height: 400px; }
 
     /* ---- Result body ---- */
     .result-body { padding: 40px 48px 12px; }
@@ -1285,12 +1287,12 @@
         <div class="cat-bar-row${isWeak ? ' weak' : ''}">
           <div class="cat-bar-label" style="justify-content:space-between;">
             <span class="cat-label-text" style="font-weight:700; color:var(--ink);">${cat.name}</span>
-            <span style="font-size:11px; font-weight:700; color:${labelColor}; background:${labelBg}; padding:2px 10px; border-radius:999px; white-space:nowrap;">${labelText}&ensp;${cat.score}/${cat.max}</span>
+            <span style="font-size:13px; font-weight:700; color:${labelColor}; background:${labelBg}; padding:3px 12px; border-radius:999px; white-space:nowrap;">${labelText}&ensp;${cat.score}/${cat.max}</span>
           </div>
           <div class="cat-bar-track">
             <div class="cat-bar-fill" style="width:${pct}%"></div>
           </div>
-          ${catComment ? `<div style="font-size:12px; color:#555; margin-top:5px; line-height:1.7;">${catComment}</div>` : ''}
+          ${catComment ? `<div style="font-size:15px; color:#555; margin-top:6px; line-height:1.8;">${catComment}</div>` : ''}
         </div>`;
     }).join('');
 
